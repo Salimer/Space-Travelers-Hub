@@ -21,7 +21,7 @@ RocketElement.propTypes = {
     country: PropTypes.string.isRequired,
     rocket_name: PropTypes.string.isRequired,
     rocket_type: PropTypes.string.isRequired,
-    flickr_images: PropTypes.array.isRequired,
+    flickr_images: PropTypes.arrayOf(PropTypes.string).isRequired,
     rocket_id: PropTypes.string.isRequired,
   }).isRequired,
 };
