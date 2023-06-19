@@ -21,6 +21,26 @@ const getMissions = createAsyncThunk('spacex/getMissions', async (thunkAPI) => {
 const missionsSlice = createSlice({
   name: 'missions',
   initialState,
+  reducers: {
+    joinMission: (state, { payload }) => ({
+      ...state,
+      missionItems: state.missionItems.map((mission) => {
+        if (payload.id !== mission.mission_id) {
+          return { ...mission };
+        }
+        return { ...mission, reserved: true };
+      }),
+    }),
+    leaveMission: (state, { payload }) => ({
+      ...state,
+      missionItems: state.missionItems.map((mission) => {
+        if (payload.id !== mission.mission_id) {
+          return { ...mission };
+        }
+        return { ...mission, reserved: false };
+      }),
+    }),
+  },
   extraReducers: (builder) => {
     builder
       .addCase(getMissions.pending, (state) => {
@@ -28,7 +48,7 @@ const missionsSlice = createSlice({
       })
       .addCase(getMissions.fulfilled, (state, action) => {
         state.loading = false;
-        state.missionItems = action.payload;
+        state.missionItems = action.payload.map((mission) => ({ ...mission, reserved: false }));
       })
       .addCase(getMissions.rejected, (state, action) => {
         state.loading = false;
@@ -39,5 +59,7 @@ const missionsSlice = createSlice({
 });
 
 export { getMissions };
+
+export const { joinMission, leaveMission } = missionsSlice.actions;
 
 export default missionsSlice.reducer;
