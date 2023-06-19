@@ -21,6 +21,7 @@ const rocketsSlice = createSlice({
       })
       .addCase(fetchRockets.rejected, (state, action) => {
         state.isLoading = false;
+        state.error = action.payload;
         console.log(action);
       });
   },
