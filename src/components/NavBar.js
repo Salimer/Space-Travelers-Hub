@@ -1,25 +1,25 @@
-import { NavLink } from "react-router-dom";
+import { NavLink } from 'react-router-dom';
 
 const NavBar = () => {
   const links = [
     {
-      path: "/",
-      name: "rockets",
+      path: '/',
+      name: 'rockets',
     },
     {
-      path: "missions",
-      name: "missions",
+      path: 'missions',
+      name: 'missions',
     },
     {
-      path: "my-profile",
-      name: "my profile",
+      path: 'my-profile',
+      name: 'my profile',
     },
   ];
   return (
     <nav>
       <ul>
         {links.map((link) => (
-          <li>
+          <li key={1}>
             <NavLink to={link.path}>{link.name}</NavLink>
           </li>
         ))}
