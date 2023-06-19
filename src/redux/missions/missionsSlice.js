@@ -14,7 +14,7 @@ const getMissions = createAsyncThunk('spacex/getMissions', async (thunkAPI) => {
     const resp = await axios.get(`${baseUrl}/${MISSIONS}`);
     return resp.data;
   } catch (e) {
-    return thunkAPI.rejectWithValue(`API call error ${e.code}`);
+    return thunkAPI.rejectWithValue(`API call error ${e.message}`);
   }
 });
 
