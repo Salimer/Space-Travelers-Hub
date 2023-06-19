@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getMissions } from '../redux/missions/missionsSlice';
 import { selectMissions } from '../redux/store';
-import Code from '../components/Code';
+import MissionList from '../components/MissionList';
 
 const Mission = () => {
   const { missionItems } = useSelector(selectMissions);
@@ -14,8 +14,7 @@ const Mission = () => {
 
   return (
     <div>
-      this is mission page
-      <Code>{JSON.stringify(missionItems, null, 2)}</Code>
+      <MissionList missions={missionItems} />
     </div>
   );
 };
