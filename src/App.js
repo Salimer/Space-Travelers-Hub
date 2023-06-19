@@ -1,12 +1,11 @@
-// App.js
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import store from './redux/store';
 import Layout from './components/Layout';
 import './App.css';
 import Rockets from './routes/Rockets';
 import MyProfile from './routes/MyProfile';
 import Missions from './routes/Missions';
+import store from './redux/store';
 
 function App() {
   return (

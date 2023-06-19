@@ -20,7 +20,7 @@ const NavBar = () => {
     <Nav>
       <ul>
         {links.map((link) => (
-          <li key={1}>
+          <li key={link.path}>
             <NavLink to={link.path}>{link.name}</NavLink>
           </li>
         ))}
@@ -32,8 +32,8 @@ const NavBar = () => {
 export default NavBar;
 
 const Nav = styled.nav`
-.active {
-  color: black;
-  text-decoration: underline;
-}
+  .active {
+    color: black;
+    text-decoration: underline;
+  }
 `;
