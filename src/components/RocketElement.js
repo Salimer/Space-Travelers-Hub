@@ -3,15 +3,14 @@ import styled from 'styled-components';
 
 const RocketElement = ({ rocket }) => (
   <Li>
+    <div className="img">
     <img src={rocket.flickr_images[0]} alt="rocket" />
-    <br />
-    {rocket.rocket_id}
-    <br />
-    {rocket.rocket_name}
-    <br />
-    {rocket.rocket_type}
-    <br />
-    <br />
+    </div>
+    <div className="details">
+    <span>{rocket.rocket_id}</span>
+    <span>{rocket.rocket_name}</span>
+    <span>{rocket.rocket_type}</span>
+    </div>
   </Li>
 );
 
@@ -28,7 +27,26 @@ RocketElement.propTypes = {
 };
 
 const Li = styled.li`
-img {
-  width: 100px;
+display: flex;
+border: 3px solid black;
+margin: 1rem;
+border-radius: 1rem;
+
+.img {
+  display: flex;
+  align-items: center;
+
+  img {
+    width: 10rem;
+    padding-left: 1rem;
+  }
+}
+
+.details {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  margin-left: 2rem;
+  justify-content: center;
 }
 `;
