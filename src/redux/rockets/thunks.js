@@ -8,7 +8,6 @@ const fetchRockets = createAsyncThunk('rockets/fetchRockets', async (thunkAPI) =
     const response = await axios(rocketsURL);
     return response.data;
   } catch (error) {
-    console.log(error);
     return thunkAPI.rejectWithValue('something went wrong!');
   }
 });
