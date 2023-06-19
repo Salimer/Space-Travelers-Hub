@@ -4,12 +4,12 @@ import styled from 'styled-components';
 const RocketElement = ({ rocket }) => (
   <Li>
     <div className="img">
-    <img src={rocket.flickr_images[0]} alt="rocket" />
+      <img src={rocket.flickr_images[0]} alt="rocket" />
     </div>
     <div className="details">
-    <span>{rocket.rocket_id}</span>
-    <span>{rocket.rocket_name}</span>
-    <span>{rocket.rocket_type}</span>
+      <span>{rocket.rocket_id}</span>
+      <span>{rocket.rocket_name}</span>
+      <span>{rocket.rocket_type}</span>
     </div>
   </Li>
 );
