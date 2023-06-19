@@ -1,5 +1,3 @@
-const Mission = () => {
-  return <div>this is mission page</div>;
-};
+const Mission = () => <div>this is mission page</div>;
 
 export default Mission;
