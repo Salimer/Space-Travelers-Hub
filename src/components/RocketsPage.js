@@ -11,9 +11,19 @@ const RocketsPage = () => {
 
   useEffect(() => {
     dispatch(fetchRockets());
-  }, []);
+  }, [dispatch]);
 
-  console.log(rockets);
+  if (error) {
+    return (
+      <div>
+        Something went wrong:
+        <br />
+        &quot;
+        {error}
+        &quot;
+      </div>
+    );
+  }
 
   return (
     <Section>
