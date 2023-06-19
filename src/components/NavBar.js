@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom';
+import styled from 'styled-components';
 
 const NavBar = () => {
   const links = [
@@ -16,7 +17,7 @@ const NavBar = () => {
     },
   ];
   return (
-    <nav>
+    <Nav>
       <ul>
         {links.map((link) => (
           <li key={1}>
@@ -24,8 +25,15 @@ const NavBar = () => {
           </li>
         ))}
       </ul>
-    </nav>
+    </Nav>
   );
 };
 
 export default NavBar;
+
+const Nav = styled.nav`
+.active {
+  color: black;
+  text-decoration: underline;
+}
+`;
