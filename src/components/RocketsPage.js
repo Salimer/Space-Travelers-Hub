@@ -12,7 +12,7 @@ const RocketsPage = () => {
   useEffect(() => {
     dispatch(fetchRockets());
   }, [dispatch]);
-
+  
   if (error) {
     return (
       <div>
