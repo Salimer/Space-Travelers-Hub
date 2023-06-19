@@ -7,7 +7,7 @@ import RocketElement from './RocketElement';
 const RocketsPage = () => {
   const dispatch = useDispatch();
 
-  const { rockets, isLoading } = useSelector((store) => store.rockets);
+  const { rockets, isLoading, error } = useSelector((store) => store.rockets);
 
   useEffect(() => {
     dispatch(fetchRockets());
