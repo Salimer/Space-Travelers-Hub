@@ -1,14 +1,16 @@
-import { createAsyncThunk } from "@reduxjs/toolkit";
+import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 // Get rockets
 const rocketsURL = 'https://api.spacexdata.com/v3/rockets';
-export const fetchRockets = createAsyncThunk('rockets/fetchRockets', async(thunkAPI) => {
-    try {
-        const repsonse = await axios(rocketsURL);
-        return Response.data;
-    } catch(error) {
-        console.log(error);
-        return thunkAPI.rejectWithValue('something went wrong!')
-    }
-})
+const fetchRockets = createAsyncThunk('rockets/fetchRockets', async (thunkAPI) => {
+  try {
+    const response = await axios(rocketsURL);
+    return response.data;
+  } catch (error) {
+    console.log(error);
+    return thunkAPI.rejectWithValue('something went wrong!');
+  }
+});
+
+export default fetchRockets;
