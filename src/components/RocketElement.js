@@ -1,7 +1,16 @@
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { useDispatch } from 'react-redux';
+import { reserveRocket, cancelReserveRocket } from '../redux/rockets/rocketsSlice';
 
-const RocketElement = ({ rocket }) => (
+const RocketElement = ({ rocket }) => {
+  const dispatch = useDispatch();
+  const handleClick = (e, id) => {
+    e.preventDefault();
+    rocket.reserved === false ? dispatch(reserveRocket({ id })) : dispatch(cancelReserveRocket({ id }));
+  }
+console.log(rocket.reserved);
+  return(
   <Li>
     <div className="img">
       <img src={rocket.flickr_images[0]} alt="rocket" />
@@ -9,10 +18,11 @@ const RocketElement = ({ rocket }) => (
     <div className="details">
       <span>{rocket.rocket_name}</span>
       <span>{rocket.description}</span>
-      <button className="reserve" type="button">Reserve Rocket</button>
+      <button onClick={(e) => {handleClick(e, rocket.id)}} className="reserve" type="button">{rocket.reserved === true ? 'Cancel Reservation' : 'Reserve Rocket'}</button>
     </div>
   </Li>
 );
+}
 
 export default RocketElement;
 
