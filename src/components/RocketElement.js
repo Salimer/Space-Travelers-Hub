@@ -13,7 +13,6 @@ const RocketElement = ({ rocket }) => {
       dispatch(cancelReserveRocket({ id }));
     }
   };
-  console.log(rocket.reserved);
   return (
     <Li>
       <div className="img">
