@@ -11,8 +11,9 @@ const RocketsPage = () => {
   const { rockets, isLoading, error } = useSelector(selectRockets);
 
   useEffect(() => {
+    if(rockets.length > 0) return;
     dispatch(fetchRockets());
-  }, [dispatch]);
+  }, [dispatch, rockets.length]);
 
   if (error) {
     return (
