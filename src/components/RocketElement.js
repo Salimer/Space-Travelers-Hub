@@ -7,9 +7,9 @@ const RocketElement = ({ rocket }) => (
       <img src={rocket.flickr_images[0]} alt="rocket" />
     </div>
     <div className="details">
-      <span>{rocket.rocket_id}</span>
       <span>{rocket.rocket_name}</span>
-      <span>{rocket.rocket_type}</span>
+      <span>{rocket.description}</span>
+      <button className="reserve" type="button">Reserve Rocket</button>
     </div>
   </Li>
 );
@@ -31,6 +31,7 @@ display: flex;
 border: 3px solid black;
 margin: 1rem;
 border-radius: 1rem;
+padding: 1rem;
 
 .img {
   display: flex;
@@ -48,5 +49,15 @@ border-radius: 1rem;
   flex-direction: column;
   margin-left: 2rem;
   justify-content: center;
+
+  .reserve {
+    max-width: fit-content;
+    padding: .5rem;
+    background-color: blue;
+    cursor: pointer;
+    border-radius: .4rem;
+    color: white;
+    border: transparent;
+  }
 }
 `;
