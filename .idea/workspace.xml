@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0e935f3f-f63f-4e57-b1d9-6c2406d5962f" name="Changes" comment="" />
+    <list default="true" id="0e935f3f-f63f-4e57-b1d9-6c2406d5962f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/Missions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/Missions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/MyProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/MyProfile.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,18 +46,20 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "feature/fetch-rockets-data",
+    "git-widget-placeholder": "feature/profile__missions",
     "last_opened_file_path": "D:/microverse/travelers-hub",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
+    "node.js.detected.package.stylelint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.standard": "",
+    "node.js.selected.package.stylelint": "D:\\microverse\\travelers-hub\\node_modules\\stylelint",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "prettierjs.PrettierConfiguration.Package": "D:\\microverse\\travelers-hub\\node_modules\\prettier",
     "rearrange.code.on.save": "true",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "actions.on.save",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -73,6 +79,9 @@
       <workItem from="1687163774033" duration="2842000" />
       <workItem from="1687171065117" duration="1692000" />
       <workItem from="1687172801765" duration="3417000" />
+      <workItem from="1687193102304" duration="2964000" />
+      <workItem from="1687259693501" duration="64000" />
+      <workItem from="1687260392811" duration="3537000" />
     </task>
     <servers />
   </component>
