@@ -25,7 +25,7 @@ const RocketsPage = () => {
       </div>
     );
   }
-  
+
   console.log(rockets);
   return (
     <Section>
