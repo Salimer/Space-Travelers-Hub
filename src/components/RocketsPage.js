@@ -3,15 +3,17 @@ import { useDispatch, useSelector } from 'react-redux';
 import styled from 'styled-components';
 import fetchRockets from '../redux/rockets/thunks';
 import RocketElement from './RocketElement';
+import { selectRockets } from '../redux/store';
 
 const RocketsPage = () => {
   const dispatch = useDispatch();
 
-  const { rockets, isLoading, error } = useSelector((store) => store.rockets);
+  const { rockets, isLoading, error } = useSelector(selectRockets);
 
   useEffect(() => {
+    if (rockets.length > 0) return;
     dispatch(fetchRockets());
-  }, [dispatch]);
+  }, [dispatch, rockets.length]);
 
   if (error) {
     return (
