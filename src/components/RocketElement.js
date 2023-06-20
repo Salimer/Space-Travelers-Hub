@@ -7,32 +7,40 @@ const RocketElement = ({ rocket }) => {
   const dispatch = useDispatch();
   const handleClick = (e, id) => {
     e.preventDefault();
-    rocket.reserved === false ? dispatch(reserveRocket({ id })) : dispatch(cancelReserveRocket({ id }));
-  }
-console.log(rocket.reserved);
-  return(
-  <Li>
-    <div className="img">
-      <img src={rocket.flickr_images[0]} alt="rocket" />
-    </div>
-    <div className="details">
-      <span>{rocket.rocket_name}</span>
-      <span>{rocket.description}</span>
-      <button onClick={(e) => {handleClick(e, rocket.id)}} className="reserve" type="button">{rocket.reserved === true ? 'Cancel Reservation' : 'Reserve Rocket'}</button>
-    </div>
-  </Li>
-);
-}
+    if (rocket.reserved === false) {
+      dispatch(reserveRocket({ id }));
+    } else {
+      dispatch(cancelReserveRocket({ id }));
+    }
+  };
+  console.log(rocket.reserved);
+  return (
+    <Li>
+      <div className="img">
+        <img src={rocket.flickr_images[0]} alt="rocket" />
+      </div>
+      <div className="details">
+        <span>{rocket.rocket_name}</span>
+        <p>
+          {rocket.reserved === true && <span className="reserved">Reserved</span>}
+          {rocket.description}
+        </p>
+        <button onClick={(e) => { handleClick(e, rocket.id); }} className="reserve-btn" type="button">{rocket.reserved === true ? 'Cancel Reservation' : 'Reserve Rocket'}</button>
+      </div>
+    </Li>
+  );
+};
 
 export default RocketElement;
 
 RocketElement.propTypes = {
   rocket: PropTypes.shape({
-    country: PropTypes.string.isRequired,
+    id: PropTypes.number.isRequired,
     rocket_name: PropTypes.string.isRequired,
-    rocket_type: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
     flickr_images: PropTypes.arrayOf(PropTypes.string).isRequired,
     rocket_id: PropTypes.string.isRequired,
+    reserved: PropTypes.bool.isRequired,
   }).isRequired,
 };
 
@@ -60,7 +68,16 @@ padding: 1rem;
   margin-left: 2rem;
   justify-content: center;
 
-  .reserve {
+  .reserved {
+    font-size: 10px;
+    border-radius: .2rem;
+    margin-right:.5rem;
+    padding: 0.2rem;
+    background-color: green;
+    color: white;
+  }
+
+  .reserve-btn {
     max-width: fit-content;
     padding: .5rem;
     background-color: blue;
