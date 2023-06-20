@@ -1,4 +1,5 @@
 import { useSelector } from 'react-redux';
+import { ListGroup } from 'react-bootstrap';
 import { selectMissions } from '../redux/store';
 
 const ProfileMissions = () => {
@@ -10,13 +11,11 @@ const ProfileMissions = () => {
   return (
     <div>
       <h3>My missions</h3>
-      <ul>
+      <ListGroup as="ul">
         {filteredMissions.map((mission) => (
-          <li key={mission.mission_id}>
-            {mission.mission_name}
-          </li>
+          <ListGroup.Item as="li" key={mission.mission_id}>{mission.mission_name}</ListGroup.Item>
         ))}
-      </ul>
+      </ListGroup>
     </div>
   );
 };
