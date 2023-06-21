@@ -47,5 +47,7 @@ const RocketsPage = () => {
 export default RocketsPage;
 
 const Section = styled.section`
-
+ul {
+  padding: 0;
+}
 `;
