@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a rocket item correctly 1`] = `
+<li
+  class="sc-bgqQcB jHJsdY"
+>
+  <div
+    class="img"
+  >
+    <img
+      alt="rocket"
+      src="falcon9.jpg"
+    />
+  </div>
+  <div
+    class="details"
+  >
+    <span>
+      Falcon 9
+    </span>
+    <p>
+      A two-stage rocket designed and manufactured by SpaceX.
+    </p>
+    <button
+      class="reserve-btn"
+      type="button"
+    >
+      Reserve Rocket
+    </button>
+  </div>
+</li>
+`;
