@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders RocketsPage correctly 1`] = `
+<section
+  class="sc-gTRrQi dmGmGe"
+>
+  <div>
+    loading...
+  </div>
+</section>
+`;
