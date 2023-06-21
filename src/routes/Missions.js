@@ -27,7 +27,7 @@ const Mission = () => {
     return (
       <div>
         <p>
-          Oops! an error occurred:
+          Oops! an error occurred. Please try again.
           {errMsg}
         </p>
       </div>

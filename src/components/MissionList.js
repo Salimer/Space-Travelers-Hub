@@ -33,7 +33,7 @@ const MissionList = (props) => {
 };
 
 MissionList.propTypes = {
-  missions: PropTypes.arrayOf.isRequired,
+  missions: PropTypes.arrayOf(Object).isRequired,
 };
 
 export default MissionList;

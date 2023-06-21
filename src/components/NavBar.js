@@ -2,6 +2,7 @@ import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import Stack from 'react-bootstrap/Stack';
 import Image from 'react-bootstrap/Image';
+import React from 'react';
 import planet from '../assets/planet.png';
 
 const Nav = styled.nav`
@@ -52,13 +53,12 @@ const NavBar = () => {
           </Stack>
           <Stack as="ul" direction="horizontal" gap={4} style={{ marginBottom: 0 }}>
             {links.map((link) => (
-              <>
+              <React.Fragment key={link.path}>
                 <li key={link.path}>
                   <NavLink to={link.path}>{link.name}</NavLink>
                 </li>
                 {link.name === 'missions' && <Separator className="vr" />}
-              </>
-
+              </React.Fragment>
             ))}
           </Stack>
         </Stack>
