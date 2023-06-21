@@ -19,12 +19,12 @@ const RocketElement = ({ rocket }) => {
         <img src={rocket.flickr_images[0]} alt="rocket" />
       </div>
       <div className="details">
-        <span>{rocket.rocket_name}</span>
+        <span className="title">{rocket.rocket_name}</span>
         <p>
           {rocket.reserved === true && <span className="reserved">Reserved</span>}
           {rocket.description}
         </p>
-        <button onClick={(e) => { handleClick(e, rocket.id); }} className="reserve-btn" type="button">{rocket.reserved === true ? 'Cancel Reservation' : 'Reserve Rocket'}</button>
+        <button onClick={(e) => { handleClick(e, rocket.id); }} className={rocket.reserved === true ? 'cancel-btn' : 'reserve-btn'} type="button">{rocket.reserved === true ? 'Cancel Reservation' : 'Reserve Rocket'}</button>
       </div>
     </Li>
   );
@@ -45,45 +45,58 @@ RocketElement.propTypes = {
 
 const Li = styled.li`
 display: flex;
-border: 3px solid black;
-margin: 1rem;
-border-radius: 1rem;
-padding: 1rem;
+padding: 1rem 0;
 
 .img {
-  display: flex;
-  align-items: center;
-
   img {
-    width: 10rem;
-    padding-left: 1rem;
+    width: 15rem;
   }
 }
 
 .details {
   display: flex;
-  gap: 1rem;
+  gap: 0rem;
   flex-direction: column;
-  margin-left: 2rem;
+  margin-left: 1rem;
   justify-content: center;
 
-  .reserved {
-    font-size: 10px;
-    border-radius: .2rem;
-    margin-right:.5rem;
-    padding: 0.2rem;
-    background-color: green;
-    color: white;
+  .title {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  p {
+    font-size: 12px;
+
+    .reserved {
+      font-size: 11px;
+      border-radius: .2rem;
+      margin-right:.5rem;
+      padding: 0.08rem 0.28rem;
+      background-color: #1aa1b9;
+      color: white;
+      font-weight: 500;
+    }
   }
 
   .reserve-btn {
     max-width: fit-content;
     padding: .5rem;
-    background-color: blue;
+    background-color: #027bff;
     cursor: pointer;
-    border-radius: .4rem;
+    border-radius: .2rem;
     color: white;
     border: transparent;
+  }
+
+  .cancel-btn {
+    max-width: fit-content;
+    padding: .5rem;
+    background-color: white;
+    cursor: pointer;
+    border-radius: .2rem;
+    color: #80878e;
+    border: 1px solid #a0a5ab;
   }
 }
 `;

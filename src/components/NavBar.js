@@ -5,29 +5,6 @@ import Image from 'react-bootstrap/Image';
 import React from 'react';
 import planet from '../assets/planet.png';
 
-const Nav = styled.nav`
-  box-shadow: 1px 0 1px black;
-
-  a {
-    text-decoration: none;
-  }
-
-  .active {
-    text-decoration: underline;
-  }
-
-  li {
-    list-style: none;
-  }
-`;
-
-const Separator = styled.div`
-  height: 1.5rem;
-  align-self: center;
-  background-color: black;
-  opacity: 1;
-`;
-
 const NavBar = () => {
   const links = [
     {
@@ -68,3 +45,26 @@ const NavBar = () => {
 };
 
 export default NavBar;
+
+const Nav = styled.nav`
+  box-shadow: 1px 0 1px black;
+
+  a {
+    text-decoration: none;
+  }
+
+  .active {
+    text-decoration: underline;
+  }
+
+  li {
+    list-style: none;
+  }
+`;
+
+const Separator = styled.div`
+  height: 1.5rem;
+  align-self: center;
+  background-color: black;
+  opacity: 1;
+`;
