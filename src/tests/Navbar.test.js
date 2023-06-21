@@ -3,11 +3,11 @@ import { MemoryRouter } from 'react-router-dom';
 import NavBar from '../components/NavBar';
 
 test('renders Navbar correctly', () => {
-    const { container } = render (
-        <MemoryRouter>
-            <NavBar />
-        </MemoryRouter>
-    );
+  const { container } = render(
+    <MemoryRouter>
+      <NavBar />
+    </MemoryRouter>,
+  );
 
-    expect(container).toMatchSnapshot();
-})
+  expect(container).toMatchSnapshot();
+});
