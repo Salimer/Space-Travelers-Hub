@@ -11,8 +11,9 @@ const Mission = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
+    if (missionItems.length > 0) return;
     dispatch(getMissions());
-  }, [dispatch]);
+  }, [dispatch, missionItems.length]);
 
   if (loading) {
     return (
@@ -26,7 +27,7 @@ const Mission = () => {
     return (
       <div>
         <p>
-          Oops! an error occurred:
+          Oops! an error occurred. Please try again.
           {errMsg}
         </p>
       </div>
