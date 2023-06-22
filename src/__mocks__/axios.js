@@ -1,8 +1,8 @@
-import baseUrl, { MISSIONS } from '../redux/api';
+import { GET_MISSIONS } from '../redux/api';
 
 export default function get(url) {
   switch (url) {
-    case `${baseUrl}/${MISSIONS}`:
+    case `${GET_MISSIONS}`:
       return Promise.resolve({
         data: [
           {
@@ -12,7 +12,9 @@ export default function get(url) {
           },
         ],
       });
+    case 'getMission/failing':
+      return Promise.reject(new Error('API call error'));
     default:
-      return Promise.resolve({ data: [{ quote: 'mock quote' }] });
+      return Promise.resolve({ data: [{ }] });
   }
 }

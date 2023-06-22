@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getMissions } from '../redux/missions/missionsSlice';
 import { selectMissions } from '../redux/store';
 import MissionList from '../components/MissionList';
+import { GET_MISSIONS } from '../redux/api';
 
 const Mission = () => {
   const {
@@ -12,7 +13,7 @@ const Mission = () => {
 
   useEffect(() => {
     if (missionItems.length > 0) return;
-    dispatch(getMissions());
+    dispatch(getMissions({ url: GET_MISSIONS }));
   }, [dispatch, missionItems.length]);
 
   if (loading) {
