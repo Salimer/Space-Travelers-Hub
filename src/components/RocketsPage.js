@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import fetchRockets from '../redux/rockets/thunks';
 import RocketElement from './RocketElement';
 import { selectRockets } from '../redux/store';
+import { GET_ROCKETS } from '../redux/api';
 
 const RocketsPage = () => {
   const dispatch = useDispatch();
@@ -12,7 +13,7 @@ const RocketsPage = () => {
 
   useEffect(() => {
     if (rockets.length > 0) return;
-    dispatch(fetchRockets());
+    dispatch(fetchRockets({ url: GET_ROCKETS }));
   }, [dispatch, rockets.length]);
 
   if (error) {
