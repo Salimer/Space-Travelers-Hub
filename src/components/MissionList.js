@@ -1,9 +1,21 @@
 import PropTypes from 'prop-types';
 import Table from 'react-bootstrap/Table';
+import { useDispatch } from 'react-redux';
 import MissionItem from './MissionItem';
+import { joinMission, leaveMission } from '../redux/missions/missionsSlice';
 
 const MissionList = (props) => {
+  const dispatch = useDispatch();
   const { missions } = props;
+
+  const handleClick = (e, { id, reserved }) => {
+    e.preventDefault();
+    if (reserved) {
+      dispatch(leaveMission({ id }));
+    } else {
+      dispatch(joinMission({ id }));
+    }
+  };
 
   return (
     <div>
@@ -24,6 +36,7 @@ const MissionList = (props) => {
               name={mission.mission_name}
               description={mission.description}
               reserved={mission.reserved}
+              handleClick={handleClick}
             />
           ))}
         </tbody>
