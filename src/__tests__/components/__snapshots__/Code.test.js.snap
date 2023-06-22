@@ -2,7 +2,7 @@
 
 exports[`testing Code component render 1`] = `
 <pre
-  className="sc-bgqQcB iVnNwL"
+  className="sc-aXZVg cwbUMI"
 >
   {"data":{"key":"value"}}
 </pre>

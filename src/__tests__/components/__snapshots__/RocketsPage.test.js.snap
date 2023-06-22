@@ -2,7 +2,7 @@
 
 exports[`renders RocketsPage correctly 1`] = `
 <section
-  class="sc-gTRrQi bCZDSB"
+  className="sc-gEvEer bPdaix"
 >
   <div>
     loading...

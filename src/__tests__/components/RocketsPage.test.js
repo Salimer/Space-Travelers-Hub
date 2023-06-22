@@ -1,15 +1,7 @@
 import React from 'react';
-import { render } from '@testing-library/react';
-import { Provider } from 'react-redux';
-import { configureStore } from '@reduxjs/toolkit';
+import renderer from 'react-test-renderer';
 import RocketsPage from '../../components/RocketsPage';
-import rocketsReducer from '../../redux/rockets/rocketsSlice';
-
-const store = configureStore({
-  reducer: {
-    rockets: rocketsReducer,
-  },
-});
+import { withProvider } from '../../utils/testUtils';
 
 test('renders RocketsPage correctly', () => {
   const rockets = [
@@ -22,11 +14,11 @@ test('renders RocketsPage correctly', () => {
     },
   ];
 
-  const { container } = render(
-    <Provider store={store}>
-      <RocketsPage rockets={rockets} />
-    </Provider>,
-  );
+  const tree = renderer.create(
+    withProvider(
+      <RocketsPage rockets={rockets} />,
+    ),
+  ).toJSON();
 
-  expect(container.firstChild).toMatchSnapshot();
+  expect(tree).toMatchSnapshot();
 });

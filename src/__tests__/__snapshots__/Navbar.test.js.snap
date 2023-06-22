@@ -3,7 +3,7 @@
 exports[`renders Navbar correctly 1`] = `
 <div>
   <nav
-    class="sc-bgqQcB jQzTWm mb-4 py-3"
+    class="sc-aXZVg ddYsyR mb-4 py-3"
   >
     <div
       class="container"
@@ -45,7 +45,7 @@ exports[`renders Navbar correctly 1`] = `
             </a>
           </li>
           <div
-            class="sc-gTRrQi hudrtB vr"
+            class="sc-gEvEer hUUilV vr"
           />
           <li>
             <a
