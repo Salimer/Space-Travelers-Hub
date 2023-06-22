@@ -1,23 +1,23 @@
-import { useSelector } from 'react-redux';
 import { ListGroup } from 'react-bootstrap';
-import { selectMissions } from '../redux/store';
+import PropTypes from 'prop-types';
 
-const ProfileMissions = () => {
-  const {
-    missionItems,
-  } = useSelector(selectMissions);
-  const filteredMissions = missionItems.filter((mission) => mission.reserved);
+const ProfileMissions = (props) => {
+  const { missions } = props;
 
   return (
     <div>
       <h3>My missions</h3>
       <ListGroup as="ul">
-        {filteredMissions.map((mission) => (
+        {missions.map((mission) => (
           <ListGroup.Item as="li" key={mission.mission_id}>{mission.mission_name}</ListGroup.Item>
         ))}
       </ListGroup>
     </div>
   );
+};
+
+ProfileMissions.propTypes = {
+  missions: PropTypes.arrayOf(Object).isRequired,
 };
 
 export default ProfileMissions;

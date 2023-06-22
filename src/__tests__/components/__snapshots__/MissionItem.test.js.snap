@@ -1,51 +1,57 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`testing MissionItem component render 1`] = `
-<tr>
-  <td
-    style={
-      Object {
-        "fontWeight": "bold",
-      }
-    }
-  >
-    Misison1
-  </td>
-  <td>
-    Mock description
-  </td>
-  <td
-    className="align-middle"
-    style={
-      Object {
-        "textAlign": "center",
-      }
-    }
-  >
-    <span
-      className="badge bg-secondary"
-    >
-      NOT A MEMBER
-    </span>
-  </td>
-  <td
-    className="align-middle"
-    style={
-      Object {
-        "textAlign": "center",
-        "width": "11rem",
-      }
-    }
-  >
-    <button
-      className="btn btn-outline-dark"
-      data-testid="mission-item-button"
-      disabled={false}
-      onClick={[Function]}
-      type="button"
-    >
-      Join mission
-    </button>
-  </td>
-</tr>
+<table
+  className="table"
+>
+  <tbody>
+    <tr>
+      <td
+        style={
+          Object {
+            "fontWeight": "bold",
+          }
+        }
+      >
+        Misison1
+      </td>
+      <td>
+        Mission1 description
+      </td>
+      <td
+        className="align-middle"
+        style={
+          Object {
+            "textAlign": "center",
+          }
+        }
+      >
+        <span
+          className="badge bg-secondary"
+        >
+          NOT A MEMBER
+        </span>
+      </td>
+      <td
+        className="align-middle"
+        style={
+          Object {
+            "textAlign": "center",
+            "width": "11rem",
+          }
+        }
+      >
+        <button
+          className="btn btn-outline-dark"
+          data-testid="mission-1-button"
+          disabled={false}
+          onClick={[Function]}
+          type="button"
+        >
+          Join mission
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
 `;
