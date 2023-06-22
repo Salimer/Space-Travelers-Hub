@@ -1,4 +1,4 @@
-import { GET_MISSIONS } from '../redux/api';
+import { GET_MISSIONS, GET_ROCKETS } from '../redux/api';
 
 const get = (url) => {
   switch (url) {
@@ -12,7 +12,19 @@ const get = (url) => {
           },
         ],
       });
-    case 'missions/fail':
+    case GET_ROCKETS:
+      return Promise.resolve({
+        data: [
+          {
+            id: 1,
+            rocket_name: 'Falcon 9',
+            description: 'A two-stage rocket designed and manufactured by SpaceX.',
+            image: 'falcon9.jpg',
+            reserved: false,
+          },
+        ],
+      });
+    case 'axios/fail':
       return Promise.reject(new Error('Mock Error'));
     default:
       return Promise.resolve(

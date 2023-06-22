@@ -1,0 +1,105 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`dispatches cancelReserveRocket when Cancel Reservation button is clicked 1`] = `
+<li
+  class="sc-aXZVg eWOXvK"
+>
+  <div
+    class="img"
+  >
+    <img
+      alt="rocket"
+      src="falcon9.jpg"
+    />
+  </div>
+  <div
+    class="details"
+  >
+    <span
+      class="title"
+    >
+      Falcon 9
+    </span>
+    <p>
+      <span
+        class="reserved"
+      >
+        Reserved
+      </span>
+      A two-stage rocket designed and manufactured by SpaceX.
+    </p>
+    <button
+      class="cancel-btn"
+      type="button"
+    >
+      Cancel Reservation
+    </button>
+  </div>
+</li>
+`;
+
+exports[`dispatches reserveRocket when Reserve Rocket button is clicked 1`] = `
+<li
+  class="sc-aXZVg eWOXvK"
+>
+  <div
+    class="img"
+  >
+    <img
+      alt="rocket"
+      src="falcon9.jpg"
+    />
+  </div>
+  <div
+    class="details"
+  >
+    <span
+      class="title"
+    >
+      Falcon 9
+    </span>
+    <p>
+      A two-stage rocket designed and manufactured by SpaceX.
+    </p>
+    <button
+      class="reserve-btn"
+      type="button"
+    >
+      Reserve Rocket
+    </button>
+  </div>
+</li>
+`;
+
+exports[`renders a rocket item correctly 1`] = `
+<li
+  class="sc-aXZVg eWOXvK"
+>
+  <div
+    class="img"
+  >
+    <img
+      alt="rocket"
+      src="falcon9.jpg"
+    />
+  </div>
+  <div
+    class="details"
+  >
+    <span
+      class="title"
+    >
+      Falcon 9
+    </span>
+    <p>
+      A two-stage rocket designed and manufactured by SpaceX.
+    </p>
+    <button
+      class="reserve-btn"
+      type="button"
+    >
+      Reserve Rocket
+    </button>
+  </div>
+</li>
+`;

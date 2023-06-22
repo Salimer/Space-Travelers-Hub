@@ -84,7 +84,7 @@ describe('testing mission slice', () => {
   });
 
   test('getMissions thunk when error', async () => {
-    await store.dispatch(getMissions({ url: 'missions/fail' }));
+    await store.dispatch(getMissions({ url: 'axios/fail' }));
 
     const actions = store.getActions();
 
