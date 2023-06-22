@@ -1,0 +1,133 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`testing MissionList component render 1`] = `
+<div>
+  <table
+    className="table table-striped table-bordered"
+    style={
+      Object {
+        "fontSize": "0.9rem",
+      }
+    }
+  >
+    <thead
+      style={
+        Object {
+          "fontSize": "1rem",
+        }
+      }
+    >
+      <tr>
+        <th>
+          Mission
+        </th>
+        <th>
+          Description
+        </th>
+        <th>
+          Status
+        </th>
+        <th>
+             
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td
+          style={
+            Object {
+              "fontWeight": "bold",
+            }
+          }
+        >
+          mission 1
+        </td>
+        <td>
+          mission 1 description
+        </td>
+        <td
+          className="align-middle"
+          style={
+            Object {
+              "textAlign": "center",
+            }
+          }
+        >
+          <span
+            className="badge bg-secondary"
+          >
+            NOT A MEMBER
+          </span>
+        </td>
+        <td
+          className="align-middle"
+          style={
+            Object {
+              "textAlign": "center",
+              "width": "11rem",
+            }
+          }
+        >
+          <button
+            className="btn btn-outline-dark"
+            data-testid="mission-1-button"
+            disabled={false}
+            onClick={[Function]}
+            type="button"
+          >
+            Join mission
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <td
+          style={
+            Object {
+              "fontWeight": "bold",
+            }
+          }
+        >
+          mission 2
+        </td>
+        <td>
+          mission 2 description
+        </td>
+        <td
+          className="align-middle"
+          style={
+            Object {
+              "textAlign": "center",
+            }
+          }
+        >
+          <span
+            className="badge bg-success"
+          >
+            Active Member
+          </span>
+        </td>
+        <td
+          className="align-middle"
+          style={
+            Object {
+              "textAlign": "center",
+              "width": "11rem",
+            }
+          }
+        >
+          <button
+            className="btn btn-outline-danger"
+            data-testid="mission-2-button"
+            disabled={false}
+            onClick={[Function]}
+            type="button"
+          >
+            Leave mission
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;

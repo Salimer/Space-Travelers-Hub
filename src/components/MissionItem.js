@@ -1,7 +1,7 @@
 import Badge from 'react-bootstrap/Badge';
 import Button from 'react-bootstrap/Button';
-import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
 import { joinMission, leaveMission } from '../redux/missions/missionsSlice';
 
 const MissionItem = (props) => {
@@ -29,6 +29,7 @@ const MissionItem = (props) => {
       </td>
       <td className="align-middle" style={{ width: '11rem', textAlign: 'center' }}>
         <Button
+          data-testid={`mission-${id}-button`}
           variant={reserved ? 'outline-danger' : 'outline-dark'}
           type="button"
           onClick={(e) => {

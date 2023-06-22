@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`testing Code component render 1`] = `
+<pre
+  className="sc-aXZVg cwbUMI"
+>
+  {"data":{"key":"value"}}
+</pre>
+`;
