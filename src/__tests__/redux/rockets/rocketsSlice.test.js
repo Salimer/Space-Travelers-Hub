@@ -1,7 +1,6 @@
 import configureStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
-import missionsReducer, { getMissions, joinMission, leaveMission } from '../../../redux/missions/missionsSlice';
-import { GET_MISSIONS, GET_ROCKETS } from '../../../redux/api';
+import { GET_ROCKETS } from '../../../redux/api';
 import rocketReducer, { cancelReserveRocket, reserveRocket } from '../../../redux/rockets/rocketsSlice';
 import fetchRockets from '../../../redux/rockets/thunks';
 
