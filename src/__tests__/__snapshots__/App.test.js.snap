@@ -1,0 +1,86 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`testing App component render 1`] = `
+Array [
+  <nav
+    className="sc-bgqQcB jQzTWm mb-4 py-3"
+  >
+    <div
+      className="container"
+    >
+      <div
+        className="justify-content-between align-items-center hstack"
+      >
+        <div
+          className="hstack gap-3"
+        >
+          <img
+            className=""
+            src="planet.png"
+            style={
+              Object {
+                "height": "3em",
+                "width": "3em",
+              }
+            }
+          />
+          <h3>
+            Space Traveler's Hub
+          </h3>
+        </div>
+        <ul
+          className="hstack gap-4"
+          style={
+            Object {
+              "marginBottom": 0,
+            }
+          }
+        >
+          <li>
+            <a
+              aria-current="page"
+              className="active"
+              href="/"
+              onClick={[Function]}
+            >
+              rockets
+            </a>
+          </li>
+          <li>
+            <a
+              className=""
+              href="/missions"
+              onClick={[Function]}
+            >
+              missions
+            </a>
+          </li>
+          <div
+            className="sc-gTRrQi hudrtB vr"
+          />
+          <li>
+            <a
+              className=""
+              href="/my-profile"
+              onClick={[Function]}
+            >
+              my profile
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>,
+  <div
+    className="container"
+  >
+    <section
+      className="sc-fFGjHI hwqLpG"
+    >
+      <div>
+        loading...
+      </div>
+    </section>
+  </div>,
+]
+`;

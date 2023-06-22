@@ -7,8 +7,8 @@ const MissionList = (props) => {
 
   return (
     <div>
-      <Table striped bordered>
-        <thead>
+      <Table striped bordered style={{ fontSize: '0.9rem' }}>
+        <thead style={{ fontSize: '1rem' }}>
           <tr>
             <th>Mission</th>
             <th>Description</th>
