@@ -1,8 +1,8 @@
 import { GET_MISSIONS } from '../redux/api';
 
-export default function get(url) {
+const get = (url) => {
   switch (url) {
-    case `${GET_MISSIONS}`:
+    case GET_MISSIONS:
       return Promise.resolve({
         data: [
           {
@@ -12,9 +12,17 @@ export default function get(url) {
           },
         ],
       });
-    case 'getMission/failing':
-      return Promise.reject(new Error('API call error'));
+    case 'missions/fail':
+      return Promise.reject(new Error('Mock Error'));
     default:
-      return Promise.resolve({ data: [{ }] });
+      return Promise.resolve(
+        {
+          data: [
+            {},
+          ],
+        },
+      );
   }
-}
+};
+
+export default { get };
