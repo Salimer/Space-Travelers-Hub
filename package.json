@@ -18,6 +18,7 @@
     "react-scripts": "5.0.1",
     "react-test-renderer": "^18.2.0",
     "redux-logger": "^3.0.6",
+    "redux-mock-store": "^1.5.4",
     "styled-components": "^5.3.10",
     "web-vitals": "^2.1.4"
   },
