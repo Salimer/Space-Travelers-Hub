@@ -1,95 +1,95 @@
 import configureStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 import missionsReducer, { getMissions, joinMission, leaveMission } from '../../../redux/missions/missionsSlice';
-import { GET_MISSIONS } from '../../../redux/api';
+import { GET_MISSIONS, GET_ROCKETS } from '../../../redux/api';
+import rocketReducer, { cancelReserveRocket, reserveRocket } from '../../../redux/rockets/rocketsSlice';
+import fetchRockets from '../../../redux/rockets/thunks';
 
 const mockStore = configureStore([thunk]);
 
-describe('testing mission slice', () => {
+describe('testing rockets slice', () => {
   let store;
 
   beforeEach(() => {
     store = mockStore({});
   });
 
-  test('joinMission action updates the store correctly', () => {
+  test('reserveRocket action updates the store correctly', () => {
     const initialState = {
-      missionItems: [
-        { mission_id: 1, reserved: false },
-        { mission_id: 2, reserved: false },
+      rockets: [
+        { id: 1, reserved: false },
+        { id: 2, reserved: false },
       ],
-      loading: false,
-      error: false,
-      errMsg: '',
+      isLoading: false,
+      error: undefined,
     };
 
     const expectedState = {
-      missionItems: [
-        { mission_id: 1, reserved: false },
-        { mission_id: 2, reserved: true },
+      rockets: [
+        { id: 1, reserved: false },
+        { id: 2, reserved: true },
       ],
-      loading: false,
-      error: false,
-      errMsg: '',
+      isLoading: false,
+      error: undefined,
     };
 
-    const action = joinMission({ id: 2 });
-    const newState = missionsReducer(initialState, action);
+    const action = reserveRocket({ id: 2 });
+    const newState = rocketReducer(initialState, action);
 
     expect(newState).toEqual(expectedState);
   });
 
-  test('leaveMission action updates the store correctly', () => {
+  test('cancelReserveRocket action updates the store correctly', () => {
     const initialState = {
-      missionItems: [
-        { mission_id: 1, reserved: false },
-        { mission_id: 2, reserved: true },
+      rockets: [
+        { id: 1, reserved: false },
+        { id: 2, reserved: true },
       ],
-      loading: false,
-      error: false,
-      errMsg: '',
+      isLoading: false,
+      error: undefined,
     };
 
     const expectedState = {
-      missionItems: [
-        { mission_id: 1, reserved: false },
-        { mission_id: 2, reserved: false },
+      rockets: [
+        { id: 1, reserved: false },
+        { id: 2, reserved: false },
       ],
-      loading: false,
-      error: false,
-      errMsg: '',
+      isLoading: false,
+      error: undefined,
     };
 
-    const action = leaveMission({ id: 2 });
-    const newState = missionsReducer(initialState, action);
+    const action = cancelReserveRocket({ id: 2 });
+    const newState = rocketReducer(initialState, action);
 
     expect(newState).toEqual(expectedState);
   });
 
-  test('getMissions thunk when successful', async () => {
-    const missionsData = [
+  test('fetchRockets thunk when successful', async () => {
+    const rocketsData = [
       {
-        mission_name: 'Mission1',
-        mission_id: '1',
-        description: 'Mission1 description',
+        id: 1,
+        rocket_name: 'Falcon 9',
+        description: 'A two-stage rocket designed and manufactured by SpaceX.',
+        image: 'falcon9.jpg',
+        reserved: false,
       },
     ];
-    await store.dispatch(getMissions({ url: GET_MISSIONS }));
+    await store.dispatch(fetchRockets({ url: GET_ROCKETS }));
 
     const actions = store.getActions();
 
-    expect(actions[0].type).toBe(getMissions.pending.type);
-    expect(actions[1].type).toBe(getMissions.fulfilled.type);
-    expect(actions[1].payload).toEqual(missionsData);
+    expect(actions[0].type).toBe(fetchRockets.pending.type);
+    expect(actions[1].type).toBe(fetchRockets.fulfilled.type);
+    expect(actions[1].payload).toEqual(rocketsData);
   });
 
-  test('getMissions thunk when error', async () => {
-    await store.dispatch(getMissions({ url: 'missions/fail' }));
+  test('fetchRockets thunk when error', async () => {
+    await store.dispatch(fetchRockets({ url: 'axios/fail' }));
 
     const actions = store.getActions();
 
-    expect(actions[0].type).toBe(getMissions.pending.type);
-    expect(actions[1].type).toBe(getMissions.rejected.type);
-    expect(actions[1].payload).toEqual('API call error Mock Error');
+    expect(actions[0].type).toBe(fetchRockets.pending.type);
+    expect(actions[1].type).toBe(fetchRockets.rejected.type);
+    expect(actions[1].payload).toEqual('something went wrong! Mock Error');
   });
 });
