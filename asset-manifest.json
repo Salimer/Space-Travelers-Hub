@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/Space-Travelers-Hub/static/css/main.2f3d2ae3.css",
-    "main.js": "/Space-Travelers-Hub/static/js/main.753679f2.js",
+    "main.js": "/Space-Travelers-Hub/static/js/main.3d67af99.js",
     "static/js/787.5646ec1e.chunk.js": "/Space-Travelers-Hub/static/js/787.5646ec1e.chunk.js",
     "static/media/planet.png": "/Space-Travelers-Hub/static/media/planet.3f6fb2742f28651730c0.png",
     "index.html": "/Space-Travelers-Hub/index.html",
     "main.2f3d2ae3.css.map": "/Space-Travelers-Hub/static/css/main.2f3d2ae3.css.map",
-    "main.753679f2.js.map": "/Space-Travelers-Hub/static/js/main.753679f2.js.map",
+    "main.3d67af99.js.map": "/Space-Travelers-Hub/static/js/main.3d67af99.js.map",
     "787.5646ec1e.chunk.js.map": "/Space-Travelers-Hub/static/js/787.5646ec1e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2f3d2ae3.css",
-    "static/js/main.753679f2.js"
+    "static/js/main.3d67af99.js"
   ]
 }
