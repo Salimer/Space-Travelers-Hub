@@ -28,7 +28,7 @@ After you're finished please remove all the comments and instructions!
 For more information on the importance of a professional README for your repositories: https://github.com/microverseinc/curriculum-transversal-skills/blob/main/documentation/articles/readme_best_practices.md
 -->
 <div align="center">
-  <h1>Space-Travelers-Hub</h1>
+  <h1 style="border-bottom: none;">Space-Travelers-Hub</h1>
 </div>
 
 <div align="center">
