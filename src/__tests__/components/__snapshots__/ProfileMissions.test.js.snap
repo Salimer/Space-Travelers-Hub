@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`testing ProfileMissions component render 1`] = `
+<div>
+  <h3>
+    My missions
+  </h3>
+  <ul
+    className="list-group"
+    onKeyDown={[Function]}
+  >
+    <li
+      className="list-group-item"
+      data-rr-ui-event-key={null}
+      onClick={[Function]}
+    >
+      mission 2
+    </li>
+  </ul>
+</div>
+`;
