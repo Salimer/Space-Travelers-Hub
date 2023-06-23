@@ -27,15 +27,16 @@ After you're finished please remove all the comments and instructions!
 
 For more information on the importance of a professional README for your repositories: https://github.com/microverseinc/curriculum-transversal-skills/blob/main/documentation/articles/readme_best_practices.md
 -->
+<div align="center">
+  <h1>Space-Travelers-Hub</h1>
+</div>
 
 <div align="center">
-  <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
-  <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
-  <br/>
-
-  <h3><b>Space-Travelers-Hub</b></h3>
-
+  <img src="https://github.com/Salimer/Space-Travelers-Hub/assets/52242629/5016c340-a8f2-4794-b8b4-ec7d79279564" alt="Screenshot 1" width="300" style="display: inline-block; margin-right: 10px;">
+  <img src="https://github.com/Salimer/Space-Travelers-Hub/assets/52242629/0bc92fad-8227-4694-8f25-b65d103cb43e" alt="Screenshot 2" width="300" style="display: inline-block; margin-right: 10px;">
+  <img src="https://github.com/Salimer/Space-Travelers-Hub/assets/52242629/8e92bc7d-58a2-4e8b-9b0a-d51586ba263d" alt="Screenshot 3" width="300" style="display: inline-block;">
 </div>
+
 
 <!-- TABLE OF CONTENTS -->
 
