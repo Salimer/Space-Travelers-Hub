@@ -96,7 +96,7 @@ For more information on the importance of a professional README for your reposit
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://space-travelers-hub-oqso.onrender.com/)
+- [Live Demo Link](https://space-traverlers-static.onrender.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
