@@ -107,4 +107,12 @@ const Li = styled.li`
       border: 1px solid #a0a5ab;
     }
   }
+
+  @media (max-width: 576px) {
+    flex-direction: column;
+
+    .details {
+      margin: 1rem 0;
+    }
+  }
 `;
